@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Time</title>
+  </head>
+  <body>
+    <p id="PrimaryElmt">Hello world</p>
+    <div id="childFreeDiv"></div>
+
+    <script>
+
+        // const primaryElement = document.getElementById('PrimaryElmt')
+        const primaryElement = document.querySelector('#PrimaryElmt');
+        
+        primaryElement.style.color = 'red';
+        primaryElement.style.fontSize = '48px';
+
+        primaryElement.addEventListener('click', function() {
+            const color = primaryElement.style.color;
+            if(color === 'red') {
+                primaryElement.style.color = 'blue';
+            } else {
+                primaryElement.style.color = 'red';
+            }
+        })
+
+
+        // const newDiv = document.createElement('div')
+        // newDiv.textContent = "Hello, I am a new div";
+        // const div = document.getElementById('childFreeDiv')
+        
+        // div.appendChild(newDiv);
+
+        // primaryElement.textContent = 'hehe goodbye!!'
+
+
+    </script>
+  </body>
+</html>
